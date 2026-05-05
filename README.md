@@ -8,15 +8,20 @@ Example setup
 #define DADT int
 ...
 struct DA* DA = newDA(10);//makes new DA have arr as len 10
+
 for(int i = 0;i < 10;i++) DA->arr[i] = i;//fill arr with vals
+
 appDA(333);//append
+
 preDA(-999);//prepend
+
 printf("\nDA 10: %i\n",DA->arr[11]);
 freeDA(DA);
 
 if you want to just append and prepend set DA->len to 0. if you know what size you will need total you can use the char resizeDAf(struct DA* DA,size_t nlen,float bias) or char resizeDAi(struct DA* DA,size_t nlen,int startoff). these allow you to adjust the size of allocated memory and bias allows you to scew the space to reduce momvment. if you want to save memory putting an nlen of 0 will resize the memory to fit len not dealloc. it is heavly recomended to resize because default growth is only 8 items witch can make raw app or pre very costly O(n^2)~. on failure does not destroy the data in the DA
 
 resizeDAf(DA,250,0.5);//make alloced area 252 long and center current arr
+
 resizeDAi(DA,333,20);//make alloced area 336 long and offset arr by 20 from start
 
 all resizeing and inits align Tarr to 4 for convenence 
