@@ -62,13 +62,10 @@ freeDA(DA);
 - Tlen - the lengnth of Tarr aligned 4 items
 - len - the legnth of arr
 
-
-```c
-resizeDAf(DA,250,0.5);//make alloced area 252 long and center current arr
-resizeDAi(DA,333,20);//make alloced area 336 long and offset arr by 20 from start
-```
-all resizeing and inits align Tarr to 4 for convenence 
+# Recomendation
+Use resize rather than letting append grow memory because growth is only 8 in append. Use Batch functions whenever possible for best speed. If you are using pointers to arr, update when arr is modified by any function as the start of arr can be moved. 
 
 # error handling 
-all functions that return pointers return NULL on failure.
-all functions that return char return non zero for errors. the return value can be decoded to find the error.
+all functions that return pointers return NULL on failure.   
+all functions that return char return non zero for errors.   
+the return value can be decoded to find the error when char is returned.
