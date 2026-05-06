@@ -51,9 +51,9 @@ freeDA(DA);
 &nbsp;&nbsp;&nbsp;Appends a whole array of vals to the end of arr
 - char batchPreDA(struct DA* DA,DADT* vals,size_t vlen);<br>
 &nbsp;&nbsp;&nbsp;Prepends a whole array of vals to the start of arr
-- char batchInsertDA(struct DA* DA,DADT* vals,size_t* indexs,size_t vlen);<br>
+- TODO char batchInsertDA(struct DA* DA,DADT* vals,size_t* indexs,size_t vlen);<br>
 &nbsp;&nbsp;&nbsp;Inserts A Batch of Values into Arr, indexs are calculated before insertion.
-- char batchEraseDA(struct DA* DA,size_t* indexs,size_t vlen);<br>
+- TODO char batchEraseDA(struct DA* DA,size_t* indexs,size_t vlen);<br>
 &nbsp;&nbsp;&nbsp;Removes A Batch of Values from Arr, indexes are calculated before removal.
 ### Struct Ref "struct DA"
 - DADT - the macro witch Defines the type arr is.
